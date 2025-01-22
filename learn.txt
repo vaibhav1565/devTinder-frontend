@@ -87,3 +87,39 @@ if user, navigate to feed
 if not, navigate to login
 
 edit profile, toast feature
+
+
+Deployment
+
+- install same node version
+
+npm install
+npm run build
+sudo apt update
+sudo apt install nginx
+sudo systemctl start nginx
+sduo systemctl enable nginx
+/var/www/html
+enable port 80
+
+caution- opening with https does not work, just directly
+
+do not allow mongodb from anywhere
+npm start
+allow port
+when closing terminal, application also does not run
+
+npm install pm2 -g
+pm2 start npm -- start
+pm2 logs
+pm2 flush <name of application>
+pm2 flush npm
+
+pm2 list
+pm2 stop npm
+pm2 delete npm
+
+pm2 start npm --name "devTinder" -- start
+
+Frontend: devtinder.com
+Backend: devtinder.com:7777 -> devtinder.com/api
